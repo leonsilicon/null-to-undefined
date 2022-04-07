@@ -15,17 +15,10 @@ export function nullToUndefined<V>(value: V): NullToUndefined<V> {
 	}
 
 	const newObj: any = {};
-	for (const k of Object.keys(value)) {
+	for (const k of Object.keys(value as any)) {
 		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const v: any = (value as any)[k];
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-		newObj[k as keyof V] =
-			v === null
-				? undefined
-				: // eslint-disable-next-line no-proto
-				v && typeof v === 'object' && v.__proto__.constructor === Object
-				? nullToUndefined(v)
-				: v;
+		newObj[k as keyof V] = v === null ? undefined : nullToUndefined(v);
 	}
 
 	return newObj;
