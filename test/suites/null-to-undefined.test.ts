@@ -12,6 +12,15 @@ test('null to undefined', () => {
 		'string',
 	]);
 
+	expect(nullToUndefined([null, 2, { foo: 'string', bar: null }])).toEqual([
+		undefined,
+		2,
+		{
+			foo: 'string',
+			bar: undefined,
+		},
+	]);
+
 	expect(nullToUndefined({ a: null, b: undefined, c: 2 })).toEqual({
 		a: undefined,
 		b: undefined,
