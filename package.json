@@ -7,9 +7,6 @@
 		"type": "git",
 		"url": "https://github.com/leonzalion/null-to-undefined.git"
 	},
-	"lionp": {
-		"tests": false
-	},
 	"homepage": "https://github.com/leonzalion/null-to-undefined#readme",
 	"author": {
 		"name": "Leon Si",
