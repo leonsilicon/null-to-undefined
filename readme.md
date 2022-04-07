@@ -15,4 +15,3 @@ import nullToUndefined from 'null-to-undefined';
 
 console.log(nullToUndefined([null, 2, { foo: 'string', bar: null }])); // [undefined, 2, { foo: 'string', bar: undefined }]
 ```
-
