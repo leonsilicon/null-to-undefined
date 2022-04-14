@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-confusing-void-expression */
 
-import { test, expect } from 'vitest';
 import * as fc from 'fast-check';
 import { traverse } from 'object-traversal';
+import { expect, test } from 'vitest';
+
 import { nullToUndefined } from '~/index.js';
 
 test('null to undefined', () => {
