@@ -1,6 +1,6 @@
 # null-to-undefined
 
-[![npm version](https://badge.fury.io/js/null-to-undefined.svg)](https://badge.fury.io/js/null-to-undefined)
+[![npm version](https://img.shields.io/npm/v/null-to-undefined)](https://npmjs.com/package/null-to-undefined)
 
 Recursively converts `null` values in an array/object to `undefined`.
 
