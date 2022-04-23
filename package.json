@@ -39,5 +39,13 @@
 	},
 	"publishConfig": {
 		"directory": "dist"
-	}
+	},
+	"keywords": [
+		"null",
+		"convert",
+		"undefined",
+		"no-null",
+		"recursive",
+		"replace"
+	]
 }
