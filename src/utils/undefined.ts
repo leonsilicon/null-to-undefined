@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-assignment */
 
 import type { NullToUndefined } from '~/types.js';
 
@@ -16,7 +16,6 @@ export function nullToUndefined<V>(value: V): NullToUndefined<V> {
 
 	const newObj: any = {};
 	for (const k of Object.keys(value as any)) {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		const v: any = (value as any)[k];
 		newObj[k as keyof V] = v === null ? undefined : nullToUndefined(v);
 	}
