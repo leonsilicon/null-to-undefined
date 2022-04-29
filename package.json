@@ -47,5 +47,8 @@
 		"no-null",
 		"recursive",
 		"replace"
-	]
+	],
+	"dependencies": {
+		"is-plain-obj": "^4.0.0"
+	}
 }

@@ -32,6 +32,8 @@ test('null to undefined', () => {
 
 	expect(nullToUndefined(null)).toEqual(undefined);
 
+	expect(nullToUndefined(new Date()) instanceof Date).toBe(true);
+
 	fc.assert(
 		fc.property(fc.jsonValue(), (value) => {
 			if (typeof value === 'object') {

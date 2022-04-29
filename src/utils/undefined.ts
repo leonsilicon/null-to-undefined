@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-assignment */
 
+import isPlainObject from 'is-plain-obj';
+
 import type { NullToUndefined } from '~/types.js';
 
 /**
@@ -7,12 +9,13 @@ import type { NullToUndefined } from '~/types.js';
  */
 export function nullToUndefined<V>(value: V): NullToUndefined<V> {
 	if (typeof value !== 'object') return value as any; // typeof `null` is an object
-
 	if (value === null) return undefined as any;
 
 	if (Array.isArray(value)) {
 		return value.map((item) => nullToUndefined(item)) as any;
 	}
+
+	if (!isPlainObject(value)) return value as any;
 
 	const newObj: any = {};
 	for (const k of Object.keys(value as any)) {
